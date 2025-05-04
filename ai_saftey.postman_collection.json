@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "883ccb34-9d20-4766-b643-51a1c1d60c68",
+		"name": "ai_saftey",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26259097"
+	},
+	"item": [
+		{
+			"name": "get_all_requests",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get_by_id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/incidents/680dd54c7c25ca0dac049e03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"incidents",
+						"680dd54c7c25ca0dac049e03"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_new_incident",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\":\"Test Incident\",\"description\":\"This is a test incident\",\"severity\":\"Medium\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/incidents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"incidents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_by_id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/incidents/680dd54c7c25ca0dac049e03",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"incidents",
+						"680dd54c7c25ca0dac049e03"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
